@@ -2,7 +2,7 @@ import React, { createContext, useState, useEffect, useContext } from 'react'
 
 const Crypto = createContext()
 
-const CryptoContext = ({children}) => {
+const CryptoContext = ({ children }) => {
     const [Currency, setCurrency] = useState("EUR")
     const [Symbol, setSymbol] = useState('€')
     

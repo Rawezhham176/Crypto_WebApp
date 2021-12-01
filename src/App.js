@@ -1,12 +1,9 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { Header } from './components'
+import { Header } from './components';
 import { makeStyles } from '@material-ui/core'
-import { Coins } from './pages';
-import  Homepage  from './pages/Homepage';
+import { Coins, Homepage } from './pages';
 
-
-function App() {
 
   const useStyles = makeStyles(() => ({
     App: {
@@ -16,6 +13,8 @@ function App() {
     }
   }))
 
+
+function App() {
   const classes = useStyles()
 
   return (
@@ -23,8 +22,8 @@ function App() {
     <div className={classes.App}>
       <Header />
         <Routes>
-          <Route path="/" component={ Homepage } exact />
-          <Route path="/coins/:id" component={ Coins } exact />
+          <Route path="/" element={ <Homepage /> } exact />
+          <Route path="/coins/:id" element={ < Coins /> } exact />
         </Routes>
  </div>
     </BrowserRouter>
